@@ -1,0 +1,151 @@
+@import url("menu.css");
+
+:root {
+    --orange: #F6BD66;
+    --green: #89c094;
+    --blue: #5db3a1;
+    --yellow: #F6D066;
+    --red: #FF9F9F;
+    --purple: #B99AE8;
+    --white: white;
+    --black: black;
+    --trans: transparent;
+
+}
+
+#first,
+#second,
+#third {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+/*card*/
+.card {
+    border: 5px solid var(--black);
+    box-shadow: 10px 10px var(--black);
+    background: var(--white);
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 55% 40%;
+    justify-items: center;
+    align-items: center;
+    padding: 100px;
+    gap: 5%
+}
+
+.banner {
+    height: 100px;
+    background-color: #FF9F9F;
+    border-bottom: 5px solid var(--black);
+}
+
+.img-container img {
+    width: 100%;
+    border: 5px solid var(--black);
+}
+
+.card-header {
+    font-size: 4.5em;
+}
+
+.date {
+    font-size: 2em;
+}
+
+.description {
+    margin: 20px 0;
+    font-size: 1.5em;
+    text-align: justify;
+}
+
+.learnmore a {
+    color: var(--black);
+    font-size: 1.5em;
+    text-decoration: underline;
+    display: block;
+}
+
+.learnmore a:hover {
+    color: var(--red);
+    text-decoration: none;
+}
+
+#second .learnmore a:hover {
+    color: var(--green);
+}
+
+#third .learnmore a:hover {
+    color: var(--purple);
+}
+
+#second .banner {
+    background-color: var(--green);
+}
+
+#third .banner {
+    background-color: var(--purple);
+}
+
+/*responsive*/
+@media (max-width: 1100px) {
+    .wrap {
+        width: 80%;
+    }
+
+    .grid-container {
+        padding: 50px;
+    }
+
+    .banner {
+        height: 50px;
+    }
+
+    .card-header {
+        font-size: 3.5em;
+    }
+
+    .date {
+        font-size: 1.5em;
+    }
+
+    .description {
+        font-size: 1.4em;
+    }
+}
+
+@media (max-width: 800px) {
+    .grid-container {
+        padding: 30px;
+    }
+
+    .card-header {
+        font-size: 2.7em;
+    }
+
+    .description {
+        font-size: 1.3em;
+    }
+
+    .learnmore {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 450px) {
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .learnmore {
+        margin-bottom: 30px;
+    }
+}

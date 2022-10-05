@@ -1,0 +1,20 @@
+@import url("menu.css");
+
+:root {
+    --orange: #F6BD66;
+    --green: #89c094;
+    --blue: #5d94b3;
+    --yellow: #F6D066;
+    --red: #FF9F9F;
+    --purple: #B99AE8;
+    --white: white;
+    --black: black;
+    --trans: transparent;
+
+}
+
+input {
+    outline: none;
+    border: none;
+    background-color: var(--trans);
+}

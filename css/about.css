@@ -1,0 +1,291 @@
+@import url("./menu.css");
+
+:root {
+    --orange: #F6BD66;
+    --green: #89c094;
+    --blue: #5d94b3;
+    --yellow: #F6D066;
+    --red: #FF9F9F;
+    --purple: #B99AE8;
+    --white: white;
+    --black: black;
+    --trans: transparent;
+
+}
+
+/*grid*/
+#first,
+#second {
+    background-color: #F9CA8C !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 40% 50%;
+    justify-items: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*card*/
+
+.card {
+    border: 5px solid var(--black);
+    width: 80%;
+    box-shadow: 0px 0px var(--black);
+    background-color: var(--white);
+    transform: rotate(-2deg) translate(0);
+    transition: 0.3s;
+}
+
+
+.card-header {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 7px 0;
+    border-bottom: 5px solid var(--black);
+    background-color: var(--yellow);
+    font-weight: 600;
+}
+
+.me-container {
+    padding: 40px 30px 100px 30px
+}
+
+.me {
+    width: 100%;
+    border: 5px solid var(--black)
+}
+
+/*tag*/
+
+.main-content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 70%;
+    gap: 10%;
+    transform: rotate(3deg);
+    justify-items: center;
+}
+
+.tag {
+    text-align: center;
+    width: 100%;
+}
+
+.tag-header {
+    font-size: 3em;
+    font-weight: 500;
+    border: 5px solid var(--black);
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+.content {
+    font-size: 2em;
+}
+
+.tag:nth-child(1) .tag-header {
+    background: var(--red);
+}
+
+.tag:nth-child(2) .tag-header {
+    background: var(--purple);
+}
+
+.tag:nth-child(3) .tag-header {
+    background: var(--blue);
+}
+
+.tag:nth-child(4) .tag-header {
+    background: var(--green);
+}
+
+.tag:nth-child(5) .tag-header {
+    background: var(--yellow);
+}
+
+.tag:nth-child(5) {
+    grid-column: 1/3;
+    width: 50%;
+}
+
+/*quote*/
+#second {
+    flex-direction: column;
+}
+
+.quote {
+    font-size: 5em;
+    display: flex;
+
+}
+
+.quote span {
+    margin-right: 15px;
+}
+
+.quote span:nth-child(5) {
+    margin-right: 0 !important;
+}
+
+.author {
+    font-size: 3em;
+}
+
+.author span {
+    color: var(--white);
+}
+
+@media (hover: hover) {
+    .quote span:hover {
+        transition: .3s;
+        transform: translateY(-5px);
+
+    }
+
+    .quote span:nth-child(1):hover {
+        color: var(--blue);
+
+    }
+
+
+
+    .quote span:nth-child(2):hover {
+        color: var(--green);
+    }
+
+    .quote span:nth-child(3):hover {
+        color: var(--orange);
+    }
+
+    .quote span:nth-child(4):hover {
+        color: var(--purple);
+    }
+
+    .quote span:nth-child(5):hover {
+        color: var(--green);
+    }
+
+    .card:hover {
+        transform: translate(10px, -10px) rotate(-2deg);
+        box-shadow: -10px 10px var(--black);
+    }
+
+}
+
+/*  responsive*/
+@media (max-width: 1100px) {
+    .main-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .wrap {
+        width: 90%;
+    }
+
+    .grid-container {
+        grid-template-columns: 60% 40%;
+    }
+
+    .card {
+        width: 80%;
+    }
+
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0;
+        width: 70%;
+    }
+
+    .tag:nth-child(5) {
+        grid-column: 1/1;
+        width: 100%;
+    }
+
+    .tag-header {
+        font-size: 2em;
+        padding: 5px 0;
+    }
+
+    .card,
+    .main-content {
+        transform: rotate(0);
+    }
+
+    .quote {
+        font-size: 4em;
+    }
+
+}
+
+@media (max-width: 450px) {
+    .wrap {
+        width: 80%;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+    .card {
+        width: 100%;
+        margin: 20vh 0;
+    }
+
+    .main-content {
+        width: 100%;
+        height: 100vh;
+        gap: 5%;
+        align-content: center;
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .tag:nth-child(5) {
+        grid-column: 1/3;
+        width: 50%;
+    }
+
+
+    .tag-header {
+        font-size: 2.2em;
+    }
+
+    .quote {
+        font-size: 2em;
+    }
+
+    .author {
+        font-size: 1.8em;
+    }
+
+
+}
+
+@media (max-width: 400px) {
+    .main-content {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1%
+    }
+
+    .tag:nth-child(5) {
+        grid-column: 1/2;
+        width: 100%;
+    }
+}
